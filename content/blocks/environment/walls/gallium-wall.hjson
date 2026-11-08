@@ -1,0 +1,6 @@
+type: StaticWall,
+name: gallium wall,
+variants: 2             //Кол-во вариаций (Спрайтов)
+attributes: {
+  gallium: 1
+}

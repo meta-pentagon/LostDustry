@@ -1,0 +1,11 @@
+type: Wall
+name: Paladium Wall
+description: Protects allied structures.
+size: 1
+armor: 3
+health: 550
+squareSprite: true
+category: defense
+requirements: [
+    paladium/6
+]

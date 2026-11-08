@@ -1,0 +1,13 @@
+{
+	"type": "material",
+	"name": "[#a0211f]rodium",
+	"description": "[teal]item [gray]of planet [royal]aytizm [gray], has [goldenrod]charge[gray]. used in [slate]most [gold]electricity [teal]bildings [gray]and [teal]unit [gray]production."
+	"hardness": 2,
+	"cost": 1,
+	"color": "a0211f",
+	"tier": 2
+	"explosiveness": 0
+	"flammability": 0
+	"radioactivity": 0
+	"charge": 0.5
+}

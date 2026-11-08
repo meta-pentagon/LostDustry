@@ -1,0 +1,13 @@
+{
+	"type": "material",
+	"name": "[#ba927e]pyrite",
+	"description": "[darkgray]common [teal]item [gray]of planet [royal]aytizm [gray], has a litle [goldenrod]charge[gray]. used in [gold]electricity [teal]bildings."
+	"hardness": 2,
+	"cost": 1,
+	"color": "ba927e",
+	"tier": 2
+	"explosiveness": 0
+	"flammability": 0
+	"radioactivity": 0
+	"charge": 0.25
+}

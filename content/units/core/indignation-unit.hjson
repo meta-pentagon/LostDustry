@@ -1,0 +1,143 @@
+{
+	"name": "Indignation",
+    "hovering": true
+    "canDrown": false
+    "shadowElevation": 0.1
+    "drag": 0.1
+    "speed": 6.5
+	"description": speeeeeeeeeeeeeeeeeeeeeeeeeeeeeeed
+    "rotateSpeed": 7
+    "accel": 0.2
+    "health": 250
+    "armor": 5
+	"buildSpeed": 1.65
+	"layer": 97
+	"mineSpeed": 8.6
+	"mineTier": 2
+    "hitSize": 10
+    "engineOffset": 4
+    "engineSize": 2
+    "itemCapacity": 75
+    "researchCostMultiplier": 0
+    "moveSound": loopExtract
+    "moveSoundVolume": 0.3
+    "moveSoundPitchMin": 1.3
+    "moveSoundPitchMax": 1.7
+	"type": flying,
+	"range": 160,
+	"faceTarget": true
+	"outlineColor": 383838
+	"flying": true
+	parts: [
+	],
+	weapons: [
+		{
+		"name": none,
+		"x": 0,
+		"y": 0,
+		"mirror": false,
+		"minWarmup": 0.25
+		"controllable": true,
+		"aiControllable": true,
+		"alwaysContinuous": false,
+		"continuous": false,
+		"shootSound": "shootAvert"
+		"rotate": false,
+		"reload": 60,
+		"rotateSpeed": 0,
+		"inaccuracy": 5,
+		"shoot": {
+			"type": "ShootMulti",
+			"source": {
+				"type": "ShootBarrel"
+				"barrels": [
+					0, 0, 0,
+				]
+			},
+			"dest": [
+				{
+					"type": "ShootPattern",
+					"shots": 15
+					"shotDelay": 2
+				}
+			]
+        },
+		bullet: {
+            "homingPower": 0.05
+			"keepVelocity": false
+            "homingDelay": 5
+            "width": 5
+            "height": 5
+			"collideTerrain": true
+			"speed": 2
+            "lifetime": 45
+            "shootEffect": "sparkShoot"
+            "smokeEffect": "shootBigSmoke"
+            "hitColor": "ba927e"
+			"backColor": "ba927e00"
+			"knockback": 1
+			"damage": 15
+			"accel": 0.05
+            "frontColor": "ba927e00"
+            "hitEffect": "hitBulletColor"
+			"despawnEffect": "hitBulletColor"
+			"recoil": 0
+            "impact": true
+			trailInterval: 1
+	 		trailRotation: false
+		    trailColor: ba927eff
+		    trailInterval: 1
+		    trailRotation: true
+		    trailLength: 6
+		    trailWidth: 1
+			trailEffect: {
+			  type: ParticleEffect
+			  followParent: true
+			  rotWithParent: false
+			  useRotation: false
+			  randLength: false
+			  lifetime: 2
+			  particles: 1
+			  length: 0
+			  colorFrom: ba927eff
+			  colorTo: ba927e00
+			  sizeFrom: 2.2
+			  sizeTo: 0
+			  region: ld-sound-star
+			  interp: pow2In
+			}
+		}
+		},
+		{
+									# ripped out from allure
+			alwaysShooting: true
+			alwaysContinuous: true
+			alternate: true
+			shootY: 0
+			recoil: 1
+			y: -4
+			x: 0
+			mirror: false
+			rotate: false,
+			shootSound: none
+			display: false
+			bullet: {
+				type: BulletType
+				keepVelocity: false
+				speed: 0
+				layer: 96
+				collides: false
+				hittable: false
+				absorbable: false
+				shootEffect: none
+				smokeEffect: none
+				hitEffect: none
+				despawnEffect: none
+				trailLength: 20
+				trailWidth: 2
+				trailColor: ba927eaa
+				lightOpacity: 0
+			}
+		},
+	],
+}

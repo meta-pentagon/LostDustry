@@ -1,0 +1,6 @@
+type: StaticWall,
+name: indium wall hard,
+variants: 3             //Кол-во вариаций (Спрайтов)
+attributes: {
+  indium: 1.5
+}

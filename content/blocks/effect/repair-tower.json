@@ -1,0 +1,104 @@
+{
+	"type": "PowerTurret",
+	"name": "repair tower",
+	"description": "Can only repair 5 buildings at once",
+	"health": 480,
+	"rotate": false
+	"size": 2,
+	"requirements": [
+		"pyrite/60", 
+		"paladium/45",
+		"rodium/45",
+	],
+	"consumes": {
+		"power": 1,
+		"liquid": "gallium/0.1",
+	},
+	"category": "defense",
+	"shootEffect": {
+		"type": "MultiEffect"
+		"effects":[
+			{
+				"type": "ParticleEffect",
+				"colorFrom": "fbd36722",
+				"colorTo": "fbd36700",
+				"lightColor": "fbd367ff",
+				"sizeFrom": 0,
+				"sizeTo": 0,
+				"particles": 5,
+				"cone": 360,
+			}
+		]
+	},
+	"targetHealing": true,
+	"reload": 30,
+	"range": 100,
+	"rotateSpeed": 0,
+	"recoil": 0
+	"layer": 30
+	"conductivePower": true
+	"inaccuracy": 360,
+	"shootCone": 500,
+	"shake": 0
+	"shootSound": "baseShoot",
+	"shoot":{
+		"dest": [
+			{
+				"type": "ShootPattern",
+				"shots": 1
+			}
+		]
+		"type": "ShootMulti",
+		"source": {
+			"type": "ShootBarrel"
+			"barrels": [
+				0, -8, 0,
+			]
+		}
+	},
+	"hasPower": true,
+	"shootType": {
+		"type": "BasicBulletType"
+		"damage": 0
+		"lifetime": 1
+		"speed": 5
+		"delayFrags": false
+		"fragSpread": 0
+		"fragBullets": 1
+		"fragOffsetMax": 1
+		"fragVelocityMin": 0
+		"fragVelocityMax": 0
+		"fragRandomSpread": 0
+		"HitEffect": "none"
+		"despawnEffect": 
+		{
+			"type": "WaveEffect"
+			"colorFrom": "ec7a7aFF"
+			"colorTo": "ec7a7a00"
+			"strokeFrom": 0
+			"strokeTo": 5
+			"sizeFrom": 0
+			"sizeTo": 10
+			"sizeInterp": "sineOut"
+			"lifetime": 20
+		}
+		"healAmount": 45
+		"collides": true
+		"collidesAir": false
+		"collidesTeam": true
+		"fragBullet": {
+			"spawnUnit": "repair-tower-repair-unit"
+			"sprite": "circle"
+			"trailEffect": "artilleryTrail"
+			"trailInterval": 3.5
+			"trailColor": "ec7a7a"
+			"frontColor": "c64949"
+			"despawnEffect": "none"
+		}
+	},
+	"drawer": {
+		"type": "DrawTurret"
+		"layer": 30
+		"basePrefix": "none-"
+	}
+}

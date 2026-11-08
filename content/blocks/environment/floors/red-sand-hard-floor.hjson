@@ -1,0 +1,4 @@
+type: floor,
+name: red sand hard floor,
+variants: 3,             //Кол-во вариаций (Спрайтов)
+wall: red-sand-hard-wall

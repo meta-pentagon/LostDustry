@@ -1,0 +1,68 @@
+{
+  "lowAltitude": true 
+  "flying": true
+  "type": "flying"
+  "engineSize": 0
+  "layer": 94
+  "strafePentalty": 1
+  "physics": false
+  "health": 10,
+  "useUnitCap": false
+  "logicControllable": false
+  "deathExplosionEffect": none
+  "playerControllable": false
+  "allowedInPayloads": false
+  "targetable": false
+  "faceTarget": false
+  "deathShake": 0
+  "vulnerableWithPayloads": false
+  "range": 100,
+  "drawBody": false
+  "drawCell": false
+  "hidden": true
+  "deathSoundVolume": 0
+  "alwaysCreateOutline": false
+  "lowAltitude": true
+  "lightColor": fbd367ff
+  "createScorch": false,
+  "createWreck": false,
+  "lightOpacity": 0.6
+  "wobble": false
+  "lightRadius": 5
+  "flying": false
+  "wreckSoundVolume": 0
+  "squareShape": true
+  "isEnemy": false,
+  "canBoost":true,
+  "canDrown":true,
+  "boostMultiplier":5,
+  "abilities": [
+	{
+		"type": "EnergyFieldAbility",
+		"damage": 0,
+		"targetGround": true
+		"targetAir": false
+		"range": 100,
+		"hitUnits": false
+		"hitBuildings": true
+		"reload": 1,
+		"hitBuildings": true,
+		"maxTargets": 3,
+		"sameTypeHealMult": 0
+		"blinkSize": 0.4,
+		"blinkScl": 0.4,
+		"rotateSpeed": 0.5,
+		"sectors": 0,
+		"healPercent": 20,
+		"color": "98ffa9ff"
+		"useAmmo": false
+	},
+	{
+		"type": RegenAbility,
+		"amount": 1
+		"percentAmount": -100
+	}
+]
+}
+
+

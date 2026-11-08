@@ -1,0 +1,21 @@
+"name": "[#b36385]oxygen"
+"coolant": true
+"flammability": 0.75
+"barColor": "b36385"
+"incinerable": true
+"lightColor": "b36385ff"
+"type": "CellLiquid"
+"description": "even more unstable"
+"boilPoint": 0
+"color": "b36385"
+"colorFrom": "b36385"
+"colorTo": "b36385"
+"maxSpread": 0.5
+"spreadDamage": 0.1
+"moveThroughBlocks": false
+"blockReactive": true
+"temperature": 0
+"heatCapacity": 0.6
+"explosiveness": 0.5
+"gasColor": "b36385"
+"viscosity": 0

@@ -1,0 +1,13 @@
+{
+	"type": "material",
+	"name": "[#8f8e9d]paladium",
+	"description": "[gray]The most [darkgray]common [gray]and [darkgray]basic [teal]item [gray]of planet [royal]aytizm [gray]. used in [slate]all [royal]aytizm [teal]bildings."
+	"hardness": 2,
+	"cost": 1,
+	"color": "8f8e9d",
+	"tier": 2
+	"explosiveness": 0
+	"flammability": 0
+	"radioactivity": 0
+	"charge": 0
+}

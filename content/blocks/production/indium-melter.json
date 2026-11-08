@@ -1,0 +1,84 @@
+{
+    "name": "indium melter",
+    "description": "...",
+    "type": "HeatCrafter",
+    "squareSprite": "false",
+    "health": 210,
+	"maxEfficiency": 1
+    "outputLiquid": {"liquid": "molten-indium", "amount": 0.30001},
+    "drawer": {
+        "type": "DrawMulti",
+        "drawers": [
+			{
+				"type": "drawRegion",
+				"suffix": "-bottom"    
+			},
+			{
+				"type": "DrawLiquidTile",
+				"drawLiquid": "molten-indium",
+				"alpha": 1,
+				"padding": 2.5,
+			},
+			{
+				"type": "DrawRegion",
+				"suffix": "-rotator",
+				"rotateSpeed": 1,
+				"spinSprite": true
+			},
+			{
+				"type": "DrawLiquidTile",
+				"drawLiquid": "molten-indium",
+				"alpha": 0.4,
+				"padding": 2.5,
+			},
+			{
+				"type": "DrawDefault"
+			}
+            {
+              "type": "DrawHeatInput"
+			  "suffix":"-heat"
+            }
+        ],
+    },
+    "size": 2,
+    "heatRequirement": 18,
+    "hasPower": false,
+    "hasItems": true,
+    "hasLiquids": true,
+    "liquidCapacity": 60,
+    "itemCapacity": 12,
+	"consumes": {
+      "items": [
+        "indium/1",
+      ],
+    },
+	"effectChance": 0.1
+	"craftEffect": {
+		"type": "RadialEffect"
+		"layer": 118
+		"rotationSpacing": 10
+		"amount": 36
+		"lengthOffset": 5
+		"effect": {
+			"particles": 2
+			"length": 6
+			"lifetime": 300
+			"cone": 10
+			"useRotation": true
+			"sizeFrom": 0
+			"sizeTo": 2
+			"colorFrom": "d76a6a99"
+			"colorTo": "d76a6a00"
+			"sizeInterp": "pow3Out"
+			"interp": "pow5Out"
+			"layer": 111
+		}
+	}
+    "craftTime": 20,
+    "category": "crafting",
+    "requirements": [
+      "pyrite/15", 
+      "paladium/10",
+	  "rodium/25"
+    ],
+}

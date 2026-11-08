@@ -1,0 +1,17 @@
+type: Pump
+health: 320
+size: 2
+pumpAmount: 0.01666667
+squareSprite: false
+category: liquid
+hasPower: true
+name: Armored impulsive pump
+liquidCapacity: 45
+consumes: {
+power: 1
+}
+conductivePower: true
+requirements: [
+  "paladium/25",
+  "rodium/25"
+]

@@ -1,0 +1,72 @@
+{	
+  "type": "GenericCrafter",
+  "size": 3,
+  "health": 580
+  "squareSprite": "false",
+  "drawer": {
+    "type": "DrawMulti",
+    "drawers": [
+      {
+        "type": "drawRegion",
+        "suffix": "-bottom"    
+      },
+      {
+        "type": "DrawCrucibleFlame"
+		"particles": 60
+      },
+      {
+        "type": "DrawCrucibleFlame"
+		"middle": "ld-sound-star"
+		"color": "d76a6a80"
+		"particleColorFrom": "d76a6a80"
+		"particleColorTo": "d76a6a80"
+		"recurrence": 3
+      },
+      {
+        "type": "DrawDefault"
+      }
+    ]
+
+  },
+  "hasPower": true,
+  "hasItems": true,
+  "name": "Dual furnance",
+  "liquidCapacity": 15,
+  "itemCapacity": 18,
+  "craftTime": 120,
+  "consumes": {
+  "power": 2,
+  "items": [
+    "pyrite/3",
+    "indium/7",
+  ],
+  },
+  "requirements": [
+      "pyrite/65",    
+      "paladium/115",
+  ],
+  "craftEffect": {
+      "type": "RadialEffect"
+      "layer": 118
+      "rotationSpacing": 30
+      "amount": 12
+      "lengthOffset": 7
+      "effect": {
+        "particles": 3
+        "length": 40
+        "lifetime": 150
+        "cone": 5
+        "baseRotation": 85
+        "useRotation": false 
+        "sizeFrom": 0
+        "sizeTo": 10
+        "colorFrom": "e0e0e0aa"
+        "colorTo": "e0e0e000"
+        "sizeInterp": "pow3In"
+        "interp": "pow3Out"
+        "layer": 111
+      }
+  }
+  "category": "crafting",
+  "outputItem": {"item": "rodium", "amount": 10}
+}

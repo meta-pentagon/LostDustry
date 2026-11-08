@@ -1,0 +1,6 @@
+type: StaticWall,
+name: indium wall light,
+variants: 3             //Кол-во вариаций (Спрайтов)
+attributes: {
+  indium: 0.6667
+}

@@ -1,0 +1,168 @@
+{
+	"name": "Exsabil",
+    "hovering": true
+    "canDrown": false
+    "shadowElevation": 0.1
+    "drag": 0.07
+    "speed": 3
+	"description": Tank machine, hight health, speeeeed.
+    "rotateSpeed": 6
+    "accel": 0.11
+    "health": 350
+    "armor": 1
+    "hitSize": 12
+    "engineOffset": 7
+    "engineSize": 2
+    "itemCapacity": 20
+    "useEngineElevation": false
+    "researchCostMultiplier": 0
+    "moveSound": loopExtract
+    "moveSoundVolume": 0.5
+    "moveSoundPitchMin": 0.7
+    "moveSoundPitchMax": 1.5
+	"type": hover,
+	"range": 160,
+	"faceTarget": true
+	"outlineColor": 383838
+	parts: [
+	{	
+        type: HoverPart 
+        x: 8
+        y: 3
+        sides: 5
+        mirror: true
+        radius: 7
+        phase: 100
+        stroke: 2
+        circles: 2
+        minStroke: 0
+        layer: 30
+        color: bf92f9
+    }
+    {
+        type: HoverPart
+        x: 6
+        y: -6
+        sides: 5
+        mirror: true
+        radius: 7
+        phase: 100
+        stroke: 2
+        circles: 2
+        minStroke: 0
+        layer: 30
+        color: bf92f9
+    }
+	],
+	weapons: [
+		{
+		"name": none,
+		"x": 0,
+		"y": 0,
+		"mirror": false,
+		"minWarmup": 0.25
+		"controllable": true,
+		"aiControllable": true,
+		"alwaysContinuous": false,
+		"continuous": false,
+		"shootSound": "shootElude"
+		"rotate": false,
+		"reload": 30,
+		"rotateSpeed": 3,
+		"inaccuracy": 10,
+		"shoot": {
+			"type": "ShootMulti",
+			"source": {
+				"type": "ShootBarrel"
+				"barrels": [
+					-5.5, 3.7, 20,
+					0, 4.2, 0,
+					5.5, 3.7, -20,
+				]
+			},
+			"dest": [
+				{
+					"type": "ShootPattern",
+					"shots": 3
+					"shotDelay": 8
+				}
+			]
+        },
+		bullet: {
+            "homingPower": 0.19
+			"keepVelocity": false
+            "homingDelay": 7
+            "width": 7
+            "height": 12
+			"collideTerrain": true
+			"speed": 2
+            "lifetime": 45
+            "shootEffect": "sparkShoot"
+            "smokeEffect": "shootBigSmoke"
+            "hitColor": "ffaacc"
+			"backColor": "cccccc00"
+			"knockback": 1
+			"damage": 5
+			"accel": 0.05
+            "frontColor": "ffaacc00"
+            "hitEffect": "hitBulletColor"
+			"despawnEffect": "hitBulletColor"
+			"recoil": 0.0333333
+            "impact": true
+			trailInterval: 1
+	 		trailRotation: false
+		    trailColor: ffaaccff
+		    trailInterval: 1
+		    trailRotation: true
+		    trailLength: 6
+		    trailWidth: 1
+			trailEffect: {
+			  type: ParticleEffect
+			  followParent: true
+			  rotWithParent: false
+			  useRotation: false
+			  randLength: false
+			  lifetime: 2
+			  particles: 1
+			  length: 0
+			  colorFrom: ffaaccff
+			  colorTo: ffaacc00
+			  sizeFrom: 3
+			  sizeTo: 0
+			  region: ld-sound-star
+			  interp: pow2In
+			}
+		}
+		},
+		{
+									# ripped out from allure
+			alwaysShooting: true
+			alwaysContinuous: true
+			alternate: true
+			shootY: 0
+			recoil: 1
+			y: 0
+			x: 0
+			mirror: false
+			rotate: false,
+			shootSound: none
+			bullet: {
+				type: BulletType
+				keepVelocity: false
+				speed: 0
+				layer: 30
+				collides: false
+				hittable: false
+				absorbable: false
+				shootEffect: none
+				smokeEffect: none
+				hitEffect: none
+				despawnEffect: none
+				trailLength: 15
+				trailWidth: 1.5
+				trailColor: ffaacc77
+				lightOpacity: 0
+			}
+		},
+	],
+}

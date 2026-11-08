@@ -1,0 +1,13 @@
+{
+	"type": "material",
+	"name": "[#798674]indium",
+	"description": "[teal]item [gray]of planet [royal]aytizm [gray], not used in any [teal]bildings [gray]only in other [teal]matireal [gray]production."
+	"hardness": 2,
+	"cost": 1,
+	"color": "798674",
+	"tier": 2
+	"explosiveness": 0
+	"flammability": 0
+	"radioactivity": 0
+	"charge": 0
+}

@@ -1,0 +1,33 @@
+type: BurstDrill
+name: Methane burst drill
+description: Burns methane and output resourses.
+size: 3
+squareSprite: true
+tier: 3
+drillTime: 430
+hardnessDrillMultiplier: 0
+liquidBoostIntensity: 2
+warmupSpeed: 0.02
+shake: 0.5
+speedCurve: pow3In
+invertedTime: 120
+liquidBoostIntensity: 1.6
+arrows: 1
+arrowSpacing: 0
+arrowOffset: 0
+itemCapacity: 15
+expanded: true
+consumes: {
+	"liquid": "methane/0.05"
+	"liquids": {
+		"liquids": [
+			"oxygen/0.033333"
+		] 
+		"optional": true
+		"booster": true
+	}
+},
+category: production
+requirements: [ 
+    "paladium/30"
+]

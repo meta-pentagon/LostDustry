@@ -1,0 +1,9 @@
+type: Sorter
+category: distribution
+size: 1
+health: 55
+name: Paladium sorter
+
+requirements: [
+  "paladium/6"
+] 

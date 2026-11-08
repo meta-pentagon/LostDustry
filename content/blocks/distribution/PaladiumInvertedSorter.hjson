@@ -1,0 +1,10 @@
+type: Sorter
+category: distribution
+size: 1
+health: 55
+name: Inverted paladium sorter
+invert: true
+
+requirements: [
+  "paladium/4"
+] 

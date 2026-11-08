@@ -1,0 +1,13 @@
+{
+	"type": "material",
+	"name": "[#BC5452]gundarium",
+	"description": "[gray]Tier 2 [teal]item [gray]of planet [royal]aytizm [gray]. used almost in [slate]all [royal]aytizm [teal]bildings."
+	"hardness": 2,
+	"cost": 1,
+	"color": "BC5452",
+	"tier": 2
+	"explosiveness": 0
+	"flammability": 0
+	"radioactivity": 0
+	"charge": 0
+}

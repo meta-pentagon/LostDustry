@@ -1,0 +1,13 @@
+{	
+  "type": "LiquidRouter",
+  "size": 1, 
+  "name": "Palladium conduit router"
+  "liquidCapacity": 100,
+    "requirements": [
+      "paladium/5",
+    ],
+	"category": "liquid",
+	"health": 200,
+	"armor": 1
+	"squareSprite": false,
+}

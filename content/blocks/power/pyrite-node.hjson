@@ -1,0 +1,27 @@
+type: BeamNode
+name: Power Node
+description: Powerline. Stores some amount of power. 
+health: 100
+fogRadius: 2
+range: 10
+size: 1
+squareSprite: false
+category: power
+hasPower: true
+conductivePower: true
+consumesPower: true
+outputsPower: true
+pulseScl: 0
+pulseMag: 0
+laserWidth: 0.68
+
+
+consumes: {
+	powerBuffered: 100
+} 
+
+
+requirements: [
+    pyrite/6,
+    paladium/2,
+]

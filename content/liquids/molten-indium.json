@@ -1,0 +1,21 @@
+"name": "[#5F6B5E]molten indium"
+"coolant": true
+"flammability": 0
+"barColor": "5F6B5E"
+"incinerable": true
+"lightColor": "5F6B5EFF"
+"type": "CellLiquid"
+"description": "molten indium"
+"boilPoint": 1.5
+"color": "d1dcc4"
+"colorFrom": "d1dcc4"
+"colorTo": "37465d"
+"maxSpread": 0.5
+"spreadDamage": 0
+"moveThroughBlocks": false
+"blockReactive": false
+"temperature": 0.5
+"heatCapacity": 0.4
+"explosiveness": 0
+"gasColor": "37465d"
+"viscosity": 0.5

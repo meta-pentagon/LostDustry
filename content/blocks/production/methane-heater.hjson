@@ -1,0 +1,85 @@
+type: HeatProducer
+name: methane heater
+description: Burns methane and output heat to all sides.
+size: 2
+heatOutput: 2
+craftTime: 5
+squareSprite: false
+drawer: {
+  type: DrawMulti
+  drawers: [
+    {
+      type: DrawRegion
+      suffix: -bottom
+    }
+    {
+      "type": "DrawLiquidTile",
+      "drawLiquid": "methane",
+      "alpha": 0.65,
+      "padding": 2.5,
+    },
+    {
+      type: DrawCrucibleFlame
+    }
+    {
+      "type": "DrawLiquidTile",
+      "drawLiquid": "methane",
+      "alpha": 0.65,
+      "padding": 2.5,
+    },
+    {
+      "type": "DrawRegion",
+      "suffix": "-rotator",
+      "rotateSpeed": 1.5,
+      "spinSprite": true
+    },
+    {
+      type: DrawDefault
+    }
+    {
+      type: DrawRegion
+      suffix: -top
+    }
+    {
+      type: DrawGlowRegion
+      suffix: -heat
+      blending: additive
+      color: d76a6a80
+    }
+  ]
+}
+consumes: {
+liquid: "methane/0.0666666666",
+},
+effectChance: 0.1
+craftEffect: {
+    type: RadialEffect
+    layer: 118
+    rotationSpacing: 60
+    amount: 6
+    lengthOffset: 6
+    effect: {
+      particles: 1
+      length: 40
+      lifetime: 200
+      cone: 5
+      baseRotation: 85
+      useRotation: false 
+      sizeFrom: 0
+      sizeTo: 10
+      colorFrom: e0e0e088
+      colorTo: e0e0e000
+      sizeInterp: pow3In
+      interp: pow3Out
+      layer: 111
+    }
+  }
+rotate: false
+ambientSound: loopSmelter
+ambientSoundVolume: 0.2
+category: crafting
+requirements: [
+    "pyrite/10", 
+    "paladium/25",
+	"rodium/15"
+]

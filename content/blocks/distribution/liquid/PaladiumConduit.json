@@ -1,0 +1,13 @@
+{
+	"type": "conduit",
+	"name": "Palladium conduit",
+	"description": "armored",
+    "requirements": [
+      "paladium/2",
+    ],
+	"category": "liquid",
+	"health": 150,
+	"armor": 1
+	"liquidCapacity": 50,
+	"speed": 0.0801
+}

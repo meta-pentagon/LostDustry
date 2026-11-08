@@ -1,0 +1,57 @@
+{
+    "name": "under burn engine",
+    "description": "It brings a moderate amount of heat to other buildings.",
+    "type": "HeaterGenerator",
+    "health": 430,
+	"itemDuration": 90,
+    "drawer": {
+        "type": "DrawMulti",
+        "drawers": [
+			{
+				"type": "drawRegion",
+				"suffix": "-bottom"    
+			},
+			{
+				"type": "DrawLiquidTile",
+				"drawLiquid": "molten-indium",
+				"alpha": 1,
+				"padding": 2.5,
+			},
+			{
+				"type": "DrawDefault"
+			},
+            {
+              "type": "DrawGlowRegion",
+			  "suffix":"-glow"
+			  "color": "ff132a70"
+			  "alpha": 0.2
+			  "glowScale": 5
+            },
+            {
+              "type": "DrawHeatOutput",
+            }
+        ],
+    },
+    "consumes": {
+        "items": [
+          "flamatite/1"
+        ],
+		"liquid": "molten-indium/0.0333332",
+    },
+    "size": 3,
+    "heatOutput": 3,
+    "hasPower": true,
+	"squareSprite": true,
+    "hasItems": true,
+    "hasLiquids": true,
+    "itemCapacity": 15,
+    "craftTime": 45,
+    "category": "power",
+	"powerProduction": 7.5,
+    "requirements": [
+		"pyrite/80", 
+		"paladium/45",
+		"rodium/60",
+		"flamatite/45"
+    ],
+}

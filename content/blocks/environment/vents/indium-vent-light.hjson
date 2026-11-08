@@ -1,0 +1,10 @@
+name: Indium vent light
+type: SteamVent
+blendGroup: indium-floor2-light
+parent: indium-floor2-light
+effect: ventSteam
+effectColor: "55544f"
+attributes: {
+   steam: 1.5
+   methane: 1
+}

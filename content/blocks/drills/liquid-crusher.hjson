@@ -1,0 +1,28 @@
+type: WallCrafter
+health: 270
+size: 2
+category: production
+liquidBoostIntensity: 1.5,
+warmupSpeed: 0.1,
+"consumes": {
+	"power": 0.2
+	"liquids": {
+		"liquids": [
+			"hydrogen/0.1666666666666666666"
+		] 
+		"optional": true
+		"booster": true
+	}
+}
+  "requirements": [
+      "pyrite/10",    
+      "paladium/25",
+  ],
+liquidCapacity: 10,
+researchCostMultiplier: 2.5
+drillTime: 120
+output: indium
+attribute: indium
+ambientSound: drill
+ambientSoundVolume: 0.2
+fogRadius: 4

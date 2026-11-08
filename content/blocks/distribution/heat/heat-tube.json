@@ -1,0 +1,31 @@
+{
+"type": "HeatConductor"
+"name": "heat tube"
+"description": "Conducts heat to other heat tubes or heat consumers."
+"size": 1
+"category": "distribution"
+
+
+"requirements": [
+	"pyrite/2", 
+	"flamatite/1"
+]
+
+"health": 160
+"regionRotated1": 1
+"drawer": {
+  "type": "DrawMulti"
+  "drawers": [
+    {
+      "type": "DrawDefault"
+    }
+    {
+      "type": "DrawHeatOutput"
+    }
+    {
+      "type": "DrawHeatInput"
+      "suffix": "-heat"
+    }
+  ]
+}
+}

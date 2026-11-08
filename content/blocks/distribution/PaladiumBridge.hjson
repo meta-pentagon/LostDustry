@@ -1,0 +1,13 @@
+type: ItemBridge
+category: distribution
+size: 1
+health: 120
+//На сколько блоков (плиток) может растянуться
+range: 5
+transportTime: 0.0801
+hasPower: false
+name: Paladium bridge conveyor
+
+requirements: [
+  "paladium/8"
+]

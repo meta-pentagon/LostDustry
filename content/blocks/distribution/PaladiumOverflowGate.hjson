@@ -1,0 +1,8 @@
+type: OverflowGate
+category: distribution
+name: Paladium overflow gate
+health: 55
+
+requirements: [
+    "paladium/6"
+] 

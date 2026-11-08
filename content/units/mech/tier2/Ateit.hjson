@@ -1,0 +1,340 @@
+type: mech
+name: Ateit
+description: DPS machine, low health, slow. Strong in only big numbers, or in a combination of other type units.
+speed: 1.2
+flying: false
+health: 2505
+armor: 8
+hitSize: 17
+range: 350,
+outlineColor: 303035
+mechLegColor: 303035
+stepSound: mechStepSmall
+stepSoundVolume: 0.6
+rotateSpeed: 2.2
+abilities: [
+  {
+    type: MoveEffectAbility
+    minVelocity: 0.1
+    x: 0
+    y: -2.5
+	effect: {
+	  type: ParticleEffect
+	  followParent: false
+	  rotWithParent: true
+	  useRotation: true
+	  randLength: false
+	  lifetime: 20
+	  particles: 1
+	  length: 0
+	  colorFrom: ffc491ff
+	  colorTo: feb38000
+	  sizeFrom: 5
+	  sizeTo: 0
+	  layer: 30
+	  region: ld-sound-star
+	  interp: pow2Out
+	}
+    teamColor: true
+    interval: 1
+  }
+]
+weapons: [
+    {
+      top: false
+      x: 9.4
+      name: Ateit-weapon1
+      recoil: 1.2
+	  recoilTime: 45
+      shootCone: 20
+      y: 0
+      reload: 90
+      rotate: true
+	  rotateSpeed: 0.7
+      mirror: true
+	  range: 350
+      alternate: true
+	  "inaccuracy": 6,
+	  heatRegion: Ateit-weapon1-heat
+	  rotationLimit: 14
+	  heatColor: ff4a23ff
+	  lifeRnd: 0.1
+	  extraLife: 0.01
+	  aiControllable: true
+      "shoot": {
+			"type": "ShootMulti",
+			"source": {
+				"type": "ShootBarrel"
+				"barrels": [
+					0, 5.3, 0,
+				]
+			},
+			"dest": [
+				{
+					"type": "ShootPattern",
+					"shots": 2
+					"shotDelay": 20
+				}
+			]
+      },
+      shootSound: shootElude
+      shootSoundVolume: 1.2
+      bullet: {
+        type: BasicBulletType
+		 despawnEffect: {
+			type: ParticleEffect
+			followParent: false
+			rotWithParent: true
+			useRotation: true
+			randLength: false
+			lifetime: 20
+			particles: 1
+			length: 0
+			colorFrom: ffc491ff
+			colorTo: ffc49100
+			sizeFrom: 7
+			sizeTo: 7
+			layer: 30
+			region: ld-deflect-medium
+			interp: pow3Out
+		}
+		fragBullets: 3
+		fragAngle: 0
+		fragSpread: 20
+		fragRandomSpread: 0
+		fragVelocityMin: 1
+		fragVelocityMax: 1
+		fragLifeMin: 1
+		fragLifeMax: 1
+		fragOnHit: true
+		fragOnDespawn: true
+		instantDisappear: false
+		damage: 65
+		keepVelocity: false
+        speed: 6.5
+        lifetime: 11
+        width: 12
+        height: 12
+        sprite: ld-pierce-bullet-small
+		collideTerrain: true
+		shootEffect: {
+		  type: ParticleEffect
+		  followParent: true
+		  rotWithParent: true
+		  useRotation: true
+		  randLength: false
+		  lifetime: 22
+		  particles: 1
+		  length: 0
+		  colorFrom: ffc491ff
+		  colorTo: ffc49100
+		  sizeFrom: 0
+		  sizeTo: 9
+		  layer: 150
+		  region: ld-sound-star
+		  interp: pow2In
+		}
+		trailEffect: {
+		  type: ParticleEffect
+		  followParent: true
+		  rotWithParent: true
+		  useRotation: true
+		  randLength: false
+		  lifetime: 15
+	      particles: 1
+		  length: 0
+		  colorFrom: feb380ff
+		  colorTo: feb38088
+		  sizeFrom: 7
+		  sizeTo: 0
+		  region: ld-deflect-small
+		  interp: pow3Out
+		}
+		frontColor: feb380ff
+		backColor: ffc491ff
+		trailColor: feb380ff
+		trailInterval: 2
+		trailRotation: true
+		trailLength: 12
+		trailWidth: 3
+		fragBullet: {
+          type: BasicBulletType
+          speed: 6.5
+          lifetime: 16
+		  homingPower: 0.15
+          homingDelay: 5
+          damage: 30
+          pierce: true
+          pierceCap: 3
+          width: 7
+          height: 7
+          sprite: ld-pierce-bullet-small-full
+		  collideTerrain: true
+		  knockback: -6
+		  followAimSpeed: 0.2
+		  trailEffect: {
+			type: ParticleEffect
+			followParent: true
+			rotWithParent: true
+			useRotation: true
+			randLength: false
+			lifetime: 15
+			particles: 1
+			length: 0
+			colorFrom: feb380ff
+			colorTo: feb38088
+			sizeFrom: 6
+			sizeTo: 0
+			region: ld-deflect-small
+			interp: pow3Out
+		  }
+		  trailColor: feb380ff
+		  trailInterval: 2
+		  trailRotation: true
+		  trailLength: 12
+		  trailWidth: 1.5
+          recoil: 0.1
+          impact: true
+		  hitSound: explosion
+		  hitSoundVolume: 0.7
+		  frontColor: feb380ff
+		  backColor: ffc491ff
+		  collideTerrain: true
+		  knockback: -6
+		  fragBullets: 4
+		  fragAngle: 45
+		  fragSpread: 90
+		  fragRandomSpread: 3
+		  fragVelocityMin: 1
+		  fragVelocityMax: 1
+		  fragLifeMin: 1
+		  fragLifeMax: 1
+		  fragOnHit: false
+		  fragOnDespawn: true
+		  collideFloor: false
+		  armorMultiplier: 0.6
+		  blockArmorMultiplier: 1.2
+		  despawnSound: explosion
+		  fragBullet: {
+			type: BasicBulletType
+			pierce: false
+			damage: 12
+			collides: true
+			drag: 0.2
+			sprite: ld-pierce-bullet-small-full
+			width: 8
+			armorMultiplier: 0.8
+		    blockArmorMultiplier: 1.2
+			height: 8
+			shrinkY: 1
+			shrinkX: -0.5
+			shrinkInterp: pow3Out
+		    frontColor: feb380ff
+		    backColor: ffc491ff
+			speed: 1
+			lifetime: 25
+			hitEffect: none
+			despawnHit: false
+			despawnEffect: none
+			hitSound: none
+			despawnSound: none
+		  }
+		  despawnHit: true
+		  shootEffect: {
+			type: ParticleEffect
+			followParent: true
+			rotWithParent: true
+			useRotation: true
+			randLength: false
+			lifetime: 22
+			particles: 1
+			length: 0
+			colorFrom: ffc491ff
+			colorTo: ffc49100
+			sizeFrom: 0
+			sizeTo: 7
+			layer: 150
+			region: ld-sound-star
+			interp: pow3In
+		  }
+		  hitEffect: {
+			type: ParticleEffect
+			followParent: false
+			rotWithParent: true
+			useRotation: true
+			randLength: false
+			lifetime: 7
+			particles: 1
+			length: 1
+			colorFrom: ffc491ff
+			colorTo: ffc49100
+			sizeFrom: 0
+			sizeTo: 5
+			layer: 30
+			region: ld-grapling-small
+			interp: pow2In
+		  }
+		  despawnEffect: {
+			type: ParticleEffect
+			followParent: false
+			rotWithParent: true
+			useRotation: true
+			randLength: false
+			lifetime: 40
+			particles: 1
+			length: 0
+			colorFrom: ffc491ff
+			colorTo: ffc49188
+			sizeFrom: 16
+			sizeTo: 0
+			layer: 30
+			region: ld-sound-star-huge
+			interp: pow3Out
+		  }
+      }
+	 }
+    }
+  {
+    x: 0
+    y: 0
+    name: Ateit-weapon2
+    reload: 150
+	recoil: 0
+    rotate: false
+	top: false
+	layer: 60
+    mirror: false
+	recoilTime: 45
+    shootSound: shootAvert
+    shootSoundVolume: 1.2
+      "shoot": {
+			"type": "ShootMulti",
+			"source": {
+				"type": "ShootBarrel"
+				"barrels": [
+					0, -1.2, 0,
+				]
+			},
+			"dest": [
+				{
+					"type": "ShootPattern",
+					"shots": 8
+					"shotDelay": 4
+				}
+			]
+      },
+	heatRegion: Ateit-weapon2-heat
+	heatColor: ff4a23ff
+    bullet: {
+      type: LightningBulletType
+      lightningLength: 15
+      damage: 35
+      pierce: false
+	  unitDamageMultiplier: 0.2
+      buildingDamageMultiplier: 1.2
+      pierceBuilding: false
+      lightningColor: ffc491ff
+	  lightningCone: 12
+    }
+  }
+]

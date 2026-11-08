@@ -1,0 +1,10 @@
+type: Unloader
+name: Hard unloader
+health: 70
+capacity: 0
+
+requirements: [
+  "paladium/15"
+  "rodium/35"
+] 
+category: effect

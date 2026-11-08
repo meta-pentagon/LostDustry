@@ -1,0 +1,82 @@
+{	
+  "type": "GenericCrafter",
+  "size": 3,
+  "health": 460
+  "squareSprite": "false",
+  "drawer": {
+    "type": "DrawMulti",
+    "drawers": [
+      {
+        "type": "drawRegion",
+        "suffix": "-bottom"    
+      },
+      {
+        "type": "DrawLiquidTile",
+        "drawLiquid": "gallium",
+        "alpha": 0.65,
+        "padding": 2.5,
+      },
+      {
+        "type": "DrawCrucibleFlame"
+		"middle": "ld-sound-star"
+		"color": "d76a6a80"
+		"particleColorFrom": "d76a6a90"
+		"particleColorTo": "d76a6a10"
+		"recurrence": 3
+		"particleLife": 120
+		"particles": 10
+		"particleSize": 9
+		"flameRad": 1
+		"circleSpace": 5
+		"flameRadiusScl": 2
+      },
+      {
+        "type": "DrawDefault"
+      }
+    ]
+
+  },
+  "hasPower": true,
+  "hasItems": true,
+  "name": "Burner compressor",
+  "liquidCapacity": 20,
+  "itemCapacity": 10,
+  "craftTime": 60,
+  "consumes": {
+  "power": 0.5,
+   "items": [
+     "paladium/2",
+   ],
+   "liquid": "gallium/0.0666666666",
+  },
+  "requirements": [
+    "pyrite/55", 
+    "paladium/30",
+	"rodium/50"
+  ],
+  "craftEffect": {
+      "type": "RadialEffect"
+      "layer": 118
+      "rotationSpacing": 30
+      "amount": 24
+      "lengthOffset": 7
+      "effect": {
+        "particles": 3
+        "length": 40
+        "lifetime": 150
+        "cone": 5
+        "baseRotation": 85
+        "useRotation": false 
+		"randLength": true
+        "sizeFrom": 0
+        "sizeTo": 10
+        "colorFrom": "b2473740"
+        "colorTo": "b2473700"
+        "sizeInterp": "pow3In"
+        "interp": "pow3Out"
+        "layer": 111
+      }
+  }
+  "category": "crafting",
+  "outputItem": {"item": "flamatite", "amount": 2}
+}

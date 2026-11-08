@@ -1,0 +1,9 @@
+type: OverflowGate
+category: distribution
+name: Paladium underflow gate
+health: 55
+invert: true
+
+requirements: [
+  "paladium/6"
+] 

@@ -1,0 +1,8 @@
+type: LiquidJunction
+health: 150
+name: Paladium conduit junction
+category: liquid
+hasPower: false
+requirements: [
+  "paladium/6",
+]

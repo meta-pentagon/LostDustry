@@ -1,0 +1,14 @@
+type: Junction
+category: distribution
+size: 1
+health: 55
+name: Paladium junction
+
+//Скорость и сколько вмещает предметов (10 шт)
+speed: 0.0801
+capacity: 4
+
+//Затраты на постройку
+requirements: [
+    "paladium/4"
+]

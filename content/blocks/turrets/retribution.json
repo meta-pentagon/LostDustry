@@ -1,0 +1,1006 @@
+{
+"name": "retribution",
+"description": "Burts 25 bullets every 2.5 seconds (do not look at shoots per second). Can't be boosted",
+"type": "ItemTurret",
+"size": 3,
+"squareSprite": false,
+"coolant": {
+  "type": "ConsumeCoolant"
+  "allowGas": false
+  "allowLiquid": true
+  "amount": 0.03333333331
+}
+"coolantMultiplier": 30
+"health": 1450,
+"range": 165,
+"armor": 4,
+"consumes": {
+  "power": 1,
+},
+"shootEffect": {
+"type": "multiEffect",
+"effects": [
+  {
+	"type": "ParticleEffect"
+	"followParent": true
+	"rotWithParent": true
+	"useRotation": true
+	"randLength": false
+	"lifetime": 26
+	"particles": 1
+	"length": 0
+	"colorFrom": "ffffffff"
+	"colorTo": "ffffff00"
+	"sizeFrom": 5
+	"sizeTo": 12
+	"region": "ld-sound-wave"
+	"interp": "pow2Out"
+  },  
+  {
+    "type": "ParticleEffect"
+    "followParent": true
+    "rotWithParent": true
+    "useRotation": true
+    "randLength": true
+    "lifetime": 70
+    "particles": 2
+    "length": 40
+	"cone": 35
+    "colorFrom": "f9f9fcff"
+    "colorTo": "f1f1e700"
+    "sizeFrom": 5
+	"layer": 30
+    "sizeTo": 0
+    "region": "ld-Artilery-shell"
+    "interp": "pow2Out"
+  },
+]
+},
+"liquidConsumed": 300,
+"outlineColor": "36363CFF"
+"cooldownTime": 125,
+"shootWarmupSpeed": 0.04,
+"warmupMaintainTime": 140
+"minWarmup": 0.96
+"trackingRange": 250
+"reload": 30,
+"inaccuracy": 0,
+"velocityRnd": 0,
+"loopSound": "loopGlow"
+"xRand": 0
+"shoot": {
+"type": "ShootMulti",
+"source": {
+"type": "ShootBarrel"
+"barrels": [
+0, -8, 0,
+]
+},
+"dest": [
+{
+  "type": "ShootHelix"
+  "shots": 2
+  "scl": 1.5
+  "mag": 3
+  "shotDelay": 5
+}
+]
+},
+"drawer": {
+	"type": "drawTurret",
+	"basePrefix": "reinforced-",
+	"parts": [
+		{
+			"type": "RegionPart",
+			"name": "ld-retribution-under-main",
+			"mirror": true,
+			"under": false,
+			"mirror": false,
+			"moveY": 0,
+			"moveX": 0,
+			"moveRot": 0
+		},
+		{
+			"type": "RegionPart",
+			"name": "ld-retribution-main-d",
+			"under": false,
+			"mirror": false
+			"recoilIndex": 0,
+			"moveY": -2,  
+			"progress": "recoil"
+			"children": [
+				{
+					"type": "RegionPart",
+					"name": "ld-retribution-main-b",
+					"mirror": true,
+					"under": false,
+					"mirror": false,
+					"moveY": 0,
+					"moveX": 0,
+					"moveRot": 0
+				},
+				{
+					"type": "RegionPart",
+					"name": "ld-retribution-none",
+					"under": false,
+					"mirror": false
+					"recoilIndex": 0,
+					"progress": {
+						"type": "warmup"
+						"ops": [
+							{
+								"op": "delay"
+								"amount": 0.6
+							},
+							{
+								"op": "curve"
+								"interp": "pow3In"
+							},
+							{
+								"op": "curve"
+								"interp": "pow3Out"
+							},
+						]
+					}
+					"moveY": -1,
+					"moveX": 0,
+					"moveRot": 0
+					"children": [
+						{
+							"type": "RegionPart",
+							"name": "ld-retribution-main-e",
+							"under": false,
+							"mirror": false,
+							"recoilIndex": 0,
+							"growY": -0.25
+							"progress": {
+								"type": "recoil"
+								"ops": [
+									{
+										"op": "compress"
+										"start": 0.35
+										"end": 0.65
+									}
+									{
+										"op": "add"
+										"other": {
+											"type": "recoil"
+											"ops": [
+												{
+													"op": "compress"
+													"start": 0.80
+													"end": 1
+												}
+												{
+													"op": "mul"
+													"amount": -1
+												}
+											]
+										}
+									}
+								]
+							}
+							"moveY": -0.25,
+							"moveX": 0,
+							"yScl": 1
+							"moveRot": 0
+						},
+					]
+				}
+				{
+					"type": "RegionPart",
+					"name": "ld-retribution-main-c-left",
+					"under": false,
+					"mirror": false,
+					"recoilIndex": 0,
+					"progress": {
+						"type": "warmup"
+						"ops": [
+							{
+								"op": "curve"
+								"interp": "pow3In"
+							},
+							{
+								"op": "curve"
+								"interp": "pow3Out"
+							},
+						]
+					}
+					"moveY": -1.25,
+					"moveX": -0.75,
+					"moveRot": 4
+				},
+				{
+					"type": "RegionPart",
+					"name": "ld-retribution-main-c-right",
+					"under": false,
+					"mirror": false,
+					"recoilIndex": 0,
+					"progress": {
+						"type": "warmup"
+						"ops": [
+							{
+								"op": "curve"
+								"interp": "pow3In"
+							},
+							{
+								"op": "curve"
+								"interp": "pow3Out"
+							},
+						]
+					}
+					"moveY": -1.25,
+					"moveX": 0.75,
+					"moveRot": -4
+				},
+				{
+					"type": "RegionPart",
+					"name": "ld-retribution-main-a-left",
+					"under": false,
+					"mirror": false,
+					"recoilIndex": 0,
+					"progress": {
+						"type": "warmup"
+						"ops": [
+							{
+								"op": "delay"
+								"amount": 0.3
+							},
+							{
+								"op": "curve"
+								"interp": "pow3Out"
+							},
+						]
+					}
+					"moveY": 0,
+					"moveX": 1,
+					"moveRot": 0
+				},
+				{
+					"type": "RegionPart",
+					"name": "ld-retribution-main-a-right",
+					"under": false,
+					"mirror": false,
+					"recoilIndex": 0,
+					"progress": {
+						"type": "warmup"
+						"ops": [
+							{
+								"op": "delay"
+								"amount": 0.3
+							},
+							{
+								"op": "curve"
+								"interp": "pow3Out"
+							},
+						]
+					}
+					"moveY": 0,
+					"moveX": -1,
+					"moveRot": 0
+				},
+			]
+		},
+		{
+			"type": "RegionPart",
+			"name": "ld-retribution-shield-none",
+			"under": false,
+			"mirror": false
+			"recoilIndex": 0,
+			"progress": {
+				"type": "recoil"
+				"ops": [
+					{
+						"op": "compress"
+						"start": 0
+						"end": 0.25
+					}
+					{
+						"op": "curve"
+						"interp": "pow2In"
+					},
+				]
+			}
+			"moveY": -1,
+			"moveX": 0,
+			"moveRot": 0
+			"children": [
+				{
+					"type": "RegionPart",
+					"name": "ld-retribution-shield-left-a",
+					"under": false,
+					"mirror": false,
+					"recoilIndex": 0,
+					"progress": {
+						"type": "warmup"
+						"ops": [
+							{
+								"op": "delay"
+								"amount": 0.25
+							},
+							{
+								"op": "curve"
+								"interp": "pow2Out"
+							},
+						]
+					}
+					"moveY": 1,
+					"moveX": -1.5,
+					"moveRot": 0
+				},
+				{
+					"type": "RegionPart",
+					"name": "ld-retribution-shield-left-b",
+					"under": false,
+					"mirror": false,
+					"recoilIndex": 0,
+					"progress": {
+						"type": "warmup"
+						"ops": [
+							{
+								"op": "delay"
+								"amount": 0.5
+							},
+							{
+								"op": "curve"
+								"interp": "pow3Out"
+							},
+						]
+					}
+					"moveY": 0,
+					"moveX": -1,
+					"moveRot": 0
+				},
+				{
+					"type": "RegionPart",
+					"name": "ld-retribution-shield-left-c",
+					"under": false,
+					"mirror": false,
+					"recoilIndex": 0,
+					"progress": {
+						"type": "warmup"
+						"ops": [
+							{
+								"op": "delay"
+								"amount": 0.6
+							},
+							{
+								"op": "curve"
+								"interp": "pow5Out"
+							},
+						]
+					}
+					"moveY": -1,
+					"moveX": -1,
+					"moveRot": 3
+				},
+			]
+		}
+		{
+			"type": "RegionPart",
+			"name": "ld-retribution-shield-none",
+			"under": false,
+			"mirror": false
+			"recoilIndex": 0,
+			"progress": {
+				"type": "recoil"
+				"ops": [
+					{
+						"op": "compress"
+						"start": 0
+						"end": 0.25
+					}
+					{
+						"op": "curve"
+						"interp": "pow2In"
+					},
+				]
+			}
+			"moveY": -1,
+			"moveX": 0,
+			"moveRot": 0
+			"children": [
+				{
+					"type": "RegionPart",
+					"name": "ld-retribution-shield-right-a",
+					"under": false,
+					"mirror": false,
+					"recoilIndex": 0,
+					"progress": {
+						"type": "warmup"
+						"ops": [
+							{
+								"op": "delay"
+								"amount": 0.25
+							},
+							{
+								"op": "curve"
+								"interp": "pow2Out"
+							},
+						]
+					}
+					"moveY": 1,
+					"moveX": 1.5,
+					"moveRot": 0
+				},
+				{
+					"type": "RegionPart",
+					"name": "ld-retribution-shield-right-b",
+					"under": false,
+					"mirror": false,
+					"recoilIndex": 0,
+					"progress": {
+						"type": "warmup"
+						"ops": [
+							{
+								"op": "delay"
+								"amount": 0.5
+							},
+							{
+								"op": "curve"
+								"interp": "pow3Out"
+							},
+						]
+					}
+					"moveY": 0,
+					"moveX": 1,
+					"moveRot": 0
+				},
+				{
+					"type": "RegionPart",
+					"name": "ld-retribution-shield-right-c",
+					"under": false,
+					"mirror": false,
+					"recoilIndex": 0,
+					"progress": {
+						"type": "warmup"
+						"ops": [
+							{
+								"op": "delay"
+								"amount": 0.6
+							},
+							{
+								"op": "curve"
+								"interp": "pow5Out"
+							},
+						]
+					}
+					"moveY": -1,
+					"moveX": 1,
+					"moveRot": -3
+				},
+			]
+		},
+		{
+			"type": "HaloPart"
+            "progress": {
+				"type": "warmup"
+				"ops": [
+					{
+						"op": "compress"
+						"start": 0
+						"end": 0.8
+					},
+					{
+						"op": "curve"
+						"interp": "pow2In"
+					},
+				]
+			}
+            "color": "D1DCC4"
+            "y": -10
+			"moveY": -2.5
+
+            "haloRotation": 90
+            "shapes": 2
+			"under": false,
+            "triLength": 0
+            "triLengthTo": 7
+            "haloRadius": 3
+            "tri": true
+            "radius": 3
+        },
+		{
+			"type": "ShapePart"
+            "progress": {
+				"type": "warmup"
+				"ops": [
+					{
+						"op": "compress"
+						"start": 0
+						"end": 0.8
+					},
+					{
+						"op": "curve"
+						"interp": "pow2In"
+					},
+				]
+			}
+            "color": "D1DCC4"
+            "y": -10
+			"moveY": -2.5
+			"under": false,
+            "circle": true
+            "hollow": true
+            "stroke": 0
+            "strokeTo": 1.6
+			"radius": 3.25
+        },
+		{
+			"type": "HaloPart"
+            "progress": {
+				"type": "warmup"
+				"ops": [
+					{
+						"op": "compress"
+						"start": 0
+						"end": 0.8
+					},
+					{
+						"op": "curve"
+						"interp": "pow2In"
+					},
+				]
+			}
+            "color": "D1DCC4"
+            "y": -10
+			"moveY": -2.5
+
+            "haloRotation": 90
+            "shapes": 2
+			"under": false,
+            "triLength": 0
+            "triLengthTo": 2.25
+            "haloRadius": 3
+            "tri": true
+            "radius": 2
+			"haloRotateSpeed": 2
+        },
+		{
+			"type": "HaloPart"
+            "progress": {
+				"type": "warmup"
+				"ops": [
+					{
+						"op": "compress"
+						"start": 0
+						"end": 0.8
+					},
+					{
+						"op": "curve"
+						"interp": "pow2In"
+					},
+				]
+			}
+            "color": "D1DCC4"
+            "y": -10
+			"moveY": -2.5
+
+            "haloRotation": 90
+            "shapes": 2
+			"under": false,
+            "triLength": 0
+            "triLengthTo": 3.5
+            "haloRadius": 3
+            "tri": true
+            "radius": 3.25
+			"haloRotateSpeed": -2
+        },
+	]
+},
+"shake": 0.3,
+"targetGround": true,
+"consumeAmmoOnce": false,
+"shootSound": "gas-gun-shot-big",
+"shootSoundVolume": 0.3
+"recoil": 0,
+"recoils": 1,
+"rotateSpeed": 4.5,
+
+"ammoTypes": {
+"paladium": {
+"damage": 13,
+"hitSound": "explosion"
+"hitSoundVolume": 0.8
+"buildingDamageMultiplier": 0.25,
+"speed": 4,
+"width": 8,
+"height": 8,
+"shrinkY": 0.3,
+"backSprite": "large-bomb-back",
+"sprite": "mine-bullet",
+"collidesGround": true,
+"collidesTiles": true,
+"shootEffect": {
+"type": "multiEffect",
+"effects": [
+  {
+	"type": "ParticleEffect"
+	"followParent": true
+	"rotWithParent": true
+	"useRotation": true
+	"randLength": false
+	"lifetime": 25
+	"particles": 1
+	"length": 0
+	"colorFrom": "ffffffff"
+	"colorTo": "ffffff00"
+	"sizeFrom": 15
+	"sizeTo": 30
+	"region": "ld-sound-wave"
+	"interp": "pow2Out"
+  }, 
+  {
+    "type": "ParticleEffect"
+    "followParent": true
+    "rotWithParent": true
+    "useRotation": true
+    "randLength": true
+    "lifetime": 75
+    "particles": 2
+    "length": 32
+	"cone": 70
+    "colorFrom": "f9f9fcff"
+    "colorTo": "f1f1e700"
+    "sizeFrom": 9
+	"layer": 30
+    "sizeTo": 0
+    "region": "ld-Artilery-shell"
+    "interp": "pow2Out"
+  },
+  "shootBig"
+  ]
+},
+"smokeEffect": "shootSmokeDisperse",
+"backColor": "76769d",
+"ammoMultiplier": 6,
+"trailColor": "69696c",
+"hitColor": "69696c",
+"trailLength": 6,
+"trailWidth": 2.5,
+"trailChance": 1,
+"lifetime": 42,
+"rotationOffset": 90,
+"knockback": 2,
+"trailRotation": "true",
+"trailEffect": "disperseTrail",
+"shootSound": "gas-gun-shot-big",
+"shootSoundVolume": 0.5
+"hitSound": "metal-hit",
+"hitSoundVolume": 0.4
+"despawnSound": "ground-hit-hard"
+"despawnSoundVolume": 0.2
+"pierce": true
+"pierceCap": 2
+"armorMultiplier": 0.2
+"trailEffect": {
+"type": "multiEffect",
+"effects": [
+  {
+    "type": "ParticleEffect"
+    "followParent": true
+    "rotWithParent": true
+    "useRotation": true
+    "randLength": true
+    "lifetime": 15
+    "particles": 1
+    "length": 16
+	"cone": 40
+    "colorFrom": "f9f9fcff"
+    "colorTo": "f1f1e700"
+    "sizeFrom": 3
+	"layer": 30
+    "sizeTo": 0
+    "region": "ld-sound-star"
+    "interp": "pow2In"
+  }]
+},
+"hitEffect": {
+"type": "multiEffect",
+"effects": ["colorSpark", "hitBulletColor"]
+},
+"despawnHit": true,
+},
+
+
+
+"rodium": {
+"damage": 16,
+"hitSound": "explosion"
+"hitSoundVolume": 0.8
+"buildingDamageMultiplier": 0.25,
+"speed": 4,
+"width": 7,
+"height": 12,
+"shrinkY": 0.2,
+"backSprite": "large-bomb-back",
+"sprite": "mine-bullet",
+"collidesGround": true,
+"collidesTiles": true,
+"shootEffect": {
+"type": "multiEffect",
+"effects": [
+  {
+	"type": "ParticleEffect"
+	"followParent": true
+	"rotWithParent": true
+	"useRotation": true
+	"randLength": false
+	"lifetime": 25
+	"particles": 1
+	"length": 0
+	"colorFrom": "a0211fff"
+	"colorTo": "a0211f00"
+	"sizeFrom": 15
+	"sizeTo": 30
+	"region": "ld-sound-wave"
+	"interp": "pow2Out"
+  }, 
+  {
+    "type": "ParticleEffect"
+    "followParent": true
+    "rotWithParent": true
+    "useRotation": true
+    "randLength": true
+    "lifetime": 75
+    "particles": 2
+    "length": 32
+	"cone": 70
+    "colorFrom": "a0211fff"
+    "colorTo": "a0211f00"
+    "sizeFrom": 9
+	"layer": 30
+    "sizeTo": 0
+    "region": "ld-Artilery-shell"
+    "interp": "pow2Out"
+  },
+  "shootBig"
+  ]
+},
+"smokeEffect": "shootSmokeDisperse",
+"backColor": "90100e",
+"ammoMultiplier": 5,
+"trailColor": "a0211f",
+"hitColor": "a0211f",
+"trailLength": 5,
+"trailWidth": 2.5,
+"trailChance": 1,
+"lifetime": 42,
+"rotationOffset": 90,
+"knockback": 2,
+"trailRotation": "true",
+"trailEffect": "disperseTrail",
+"shootSound": "gas-gun-shot-big",
+"shootSoundVolume": 0.5
+"hitSound": "metal-hit",
+"hitSoundVolume": 0.4
+"despawnSound": "ground-hit-hard"
+"despawnSoundVolume": 0.2
+"pierce": true
+"pierceCap": 5
+"armorMultiplier": 0.75
+"intervalBullets": 2
+"intervalRandomSpread": 15
+"intervalSpread": 300
+"intervalAngle": 0
+"intervalDelay": 1
+"bulletInterval": 8
+"homingPower": 0.05
+"homingDelay": 10
+"intervalBullet": {
+  "createChance": 0.5
+  "type": "LightningBulletType"
+  "lightningLength": 7
+  "damage": 3
+  "pierce": false
+  "buildingDamageMultiplier": 0
+  "pierceBuilding": false
+  "lightningColor": "a0211fff"
+  "lightningCone": 10
+}
+"trailEffect": {
+"type": "multiEffect",
+"effects": [
+  {
+    "type": "ParticleEffect"
+    "followParent": true
+    "rotWithParent": true
+    "useRotation": true
+    "randLength": true
+    "lifetime": 15
+    "particles": 1
+    "length": 16
+	"cone": 40
+    "colorFrom": "a0211fff"
+    "colorTo": "a0211f00"
+    "sizeFrom": 3
+	"layer": 30
+    "sizeTo": 0
+    "region": "ld-sound-star"
+    "interp": "pow2In"
+  }]
+},
+"hitEffect": {
+"type": "multiEffect",
+"effects": ["colorSpark", "hitBulletColor"]
+},
+"despawnHit": true,
+},
+
+
+
+"gundarium": {
+"damage": 20,
+"hitSound": "explosion"
+"hitSoundVolume": 0.8
+"buildingDamageMultiplier": 0.25,
+"speed": 9,
+"width": 8,
+"height": 8,
+"shrinkY": 0.3,
+"backSprite": "large-bomb-back",
+"sprite": "mine-bullet",
+"collidesGround": true,
+"collidesTiles": true,
+"shootEffect": {
+"type": "multiEffect",
+"effects": [
+  {
+	"type": "ParticleEffect"
+	"followParent": true
+	"rotWithParent": true
+	"useRotation": true
+	"randLength": false
+	"lifetime": 25
+	"particles": 1
+	"length": 0
+	"colorFrom": "bc5452ff"
+	"colorTo": "bc545200"
+	"sizeFrom": 15
+	"sizeTo": 30
+	"region": "ld-sound-wave"
+	"interp": "pow2Out"
+  }, 
+  {
+    "type": "ParticleEffect"
+    "followParent": true
+    "rotWithParent": true
+    "useRotation": true
+    "randLength": true
+    "lifetime": 75
+    "particles": 2
+    "length": 32
+	"cone": 70
+    "colorFrom": "bc5452ff"
+    "colorTo": "bc545200"
+    "sizeFrom": 9
+	"layer": 30
+    "sizeTo": 0
+    "region": "ld-Artilery-shell"
+    "interp": "pow2Out"
+  },
+  "shootBig"
+  ]
+},
+"smokeEffect": "shootSmokeDisperse",
+"backColor": "ab4341",
+"ammoMultiplier": 10,
+"trailColor": "bc5452",
+"hitColor": "bc5452",
+"trailLength": 9,
+"trailWidth": 2.5,
+"trailChance": 1,
+"lifetime": 25,
+"rotationOffset": 90,
+"knockback": 6,
+"trailRotation": "true",
+"trailEffect": "disperseTrail",
+"shootSound": "gas-gun-shot-big",
+"shootSoundVolume": 0.75
+"hitSound": "metal-hit",
+"hitSoundVolume": 0.6
+"despawnSound": "ground-hit-hard"
+"despawnSoundVolume": 0.3
+"intervalBullets": 4
+"intervalRandomSpread": 3
+"intervalSpread": 25
+"intervalAngle": 0
+"intervalDelay": 1
+"bulletInterval": 3
+"homingPower": 0.06
+"homingRange": 100
+"homingDelay": 0
+"intervalBullet": {
+  "createChance": 0.25
+  "damage": 5
+  "backColor": "ab4341",
+  "speed": 6
+  "lifetime": 7
+  "pierce": false
+  "buildingDamageMultiplier": 0.5
+  "pierceBuilding": false
+  "pierce": true
+  "pierceCap": 2
+  "armorMultiplier": 0.9
+  "homingPower": 0.2
+  "homingRange": 100
+  "homingDelay": 0
+  "hitSound": "explosion"
+  "hitSoundVolume": 0.5
+  "width": 4,
+  "height": 4,
+  "shrinkY": 0.3,
+  "trailColor": "bc5452",
+  "hitColor": "bc5452",
+  "trailLength": 9,
+  "trailWidth": 1.25,
+  "trailChance": 1,
+  "backSprite": "large-bomb-back",
+  "sprite": "mine-bullet",
+  "hitEffect": {
+  "type": "multiEffect",
+  "effects": ["colorSpark", "hitBulletColor"]
+  },
+  "despawnHit": true,
+  "trailEffect": {
+  "type": "multiEffect",
+  "effects": [
+    {
+      "type": "ParticleEffect"
+      "followParent": true
+      "rotWithParent": true
+      "useRotation": true
+      "randLength": true
+      "lifetime": 15
+      "particles": 1
+      "length": 16
+	  "cone": 40
+      "colorFrom": "bc5452ff"
+      "colorTo": "bc545200"
+      "sizeFrom": 3
+      "layer": 30
+      "sizeTo": 0
+      "region": "ld-sound-star"
+      "interp": "pow2In"
+    }]
+  },
+}
+"pierce": true
+"pierceCap": 3
+"armorMultiplier": 0.9
+"trailEffect": {
+"type": "multiEffect",
+"effects": [
+  {
+    "type": "ParticleEffect"
+    "followParent": true
+    "rotWithParent": true
+    "useRotation": true
+    "randLength": true
+    "lifetime": 15
+    "particles": 1
+    "length": 16
+	"cone": 40
+    "colorFrom": "bc5452ff"
+    "colorTo": "bc545200"
+    "sizeFrom": 3
+	"layer": 30
+    "sizeTo": 0
+    "region": "ld-sound-star"
+    "interp": "pow2In"
+  }]
+},
+"hitEffect": {
+"type": "multiEffect",
+"effects": ["colorSpark", "hitBulletColor"]
+},
+"despawnHit": true,
+},
+},
+"requirements": [
+  "pyrite/50", 
+  "paladium/120",
+  "rodium/75"
+],
+"category": "turret",
+}

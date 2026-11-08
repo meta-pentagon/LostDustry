@@ -1,0 +1,4 @@
+type: floor,
+name: indium floor2 hard,
+variants: 3,             //Кол-во вариаций (Спрайтов)
+wall: indium-wall-hard

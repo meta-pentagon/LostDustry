@@ -1,0 +1,13 @@
+{
+	"type": "material",
+	"name": "[#9194b5]flamatite",
+	"description": "[teal]item [gray]of planet [royal]aytizm [gray], not used in any [teal]bildings [gray]only in [gold]power [gray]generation or other[teal]matireal [gray]production."
+	"hardness": 2,
+	"cost": 1,
+	"color": "9194b5",
+	"tier": 2
+	"explosiveness": 0.5
+	"flammability": 1
+	"radioactivity": 0
+	"charge": 0
+}

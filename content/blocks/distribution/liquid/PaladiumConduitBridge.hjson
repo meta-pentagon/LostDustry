@@ -1,0 +1,18 @@
+{
+  type: LiquidBridge
+  name: Palladium conduit bridge
+  localizedName: Palladium bridge
+  health: 250
+  armor: 1
+  hasPower: false
+  range: 5
+  liquidPressure: 5
+  "liquidCapacity": 100,
+  requirements: [
+	{
+	 item: paladium
+	 amount: 16
+	}
+  ],
+  category: liquid
+}

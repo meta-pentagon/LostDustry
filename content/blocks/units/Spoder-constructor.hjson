@@ -1,0 +1,25 @@
+name: "Spoder constructor"
+type: UnitFactory
+health: 615
+size: 3
+configurable: true
+consumes: {
+power: 1
+liquid: "gallium/0.0333333333"
+}
+plans: [
+  {
+    unit: Corba
+    requirements: [
+	  "rodium/15",
+	  "paladium/18",
+    ]
+    time: 1080
+  }
+]
+category: units
+requirements: [
+  "pyrite/45", 
+  "paladium/120",
+  "rodium/85"
+]

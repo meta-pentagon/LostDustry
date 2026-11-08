@@ -1,0 +1,13 @@
+name: Paladium conveyor
+category: distribution
+speed: 0.0801      //Скорость
+displayedSpeed: 10     //Отображаемая скорость
+health: 50
+acceptsItems: true      //Может принимать предметы? Да
+type: Conveyor
+"requirements": [ 
+  "paladium/1"
+],
+
+junctionReplacement: PaladiumJunction
+bridgeReplacement: PaladiumBridge

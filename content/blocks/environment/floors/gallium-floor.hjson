@@ -1,0 +1,4 @@
+type: floor,
+name: gallium floor,
+variants: 2,             //Кол-во вариаций (Спрайтов)
+wall: gallium-wall

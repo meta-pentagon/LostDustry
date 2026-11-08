@@ -1,0 +1,22 @@
+type: CoreBlock
+localizedName: amalga
+category: effect
+health: 1780
+armor: 3
+size: 3
+
+itemCapacity: 1500          //Вместимость ядра
+unitCapModifier: 12          //На сколько увеличивает максимальное количество юнитов, которых можно построить
+unitType: "indignation-unit"
+incinerateNonBuildable: false        //Нельзя строить в игре (true - да нельзя, false - нет можно); Для первого ядра стоит ставить true
+isFirstTier: true           //Первое ядро? (У нас да, значит true)
+squareSprite: false             //Квадратный спрайт? (Ставьте false)
+
+//Что нужно для постройки (пока оставим пустым)
+requirements: [
+  "pyrite/315", 
+  "paladium/750",
+  "rodium/470"
+]
+
+alwaysUnlocked: true            //Всегда открыто? (для первого ядра всегда оставляем true)

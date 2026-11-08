@@ -1,0 +1,200 @@
+{
+"name": "irrefutability",
+"description": "Super Turret",
+"type": "ItemTurret",
+"size": 4,
+"squareSprite": false,
+"coolant": {
+  "type": "ConsumeCoolant"
+  "allowGas": true
+  "allowLiquid": true
+  "amount": 0.06666666665
+}
+"coolantMultiplier": 30
+"health": 1780,
+"range": 375,
+"armor": 5,
+"shootEffect": {
+"type": "multiEffect",
+"effects": [ 
+  {
+    "type": "ParticleEffect"
+    "followParent": true
+    "rotWithParent": true
+    "useRotation": true
+    "randLength": true
+    "lifetime": 25
+    "particles": 3
+    "length": 30
+	"cone": 25
+    "colorFrom": "f9f9fcff"
+    "colorTo": "f1f1e700"
+    "sizeFrom": 6
+	"layer": 30
+    "sizeTo": 0
+    "region": "ld-Artilery-shell"
+    "interp": "pow2Out"
+  },
+  "shootBig"
+]
+},
+"outlineColor": "36363CFF"
+"cooldownTime": 500,
+"shootWarmupSpeed": 0.04,
+"warmupMaintainTime": 300
+"minWarmup": 0.96
+"trackingRange": 475
+"reload": 180,
+"inaccuracy": 0,
+"velocityRnd": 0,
+"loopSound": "none"
+"xRand": 2
+"shoot": {
+"type": "ShootMulti",
+"source": {
+"type": "ShootBarrel"
+"barrels": [
+0, -7, 0,
+]
+},
+"dest": [
+{
+"type": "ShootPattern",
+"shots": 1
+"shotDelay": 0
+}
+]
+},
+"drawer": {
+"type": "drawTurret",
+"basePrefix": "reinforced-",
+"parts": [
+{
+"type": "RegionPart",
+"suffix": "-main",
+"under": false,
+"mirror": false
+"recoilIndex": 0,
+"moveY": -1,
+"progress": "recoil"
+},
+]
+},
+"shake": 0.3,
+"targetGround": true,
+"consumeAmmoOnce": false,
+"shootSound": "shot-big-echo",
+"shootSoundVolume": 1.3
+"recoil": 0,
+"recoils": 1,
+"rotateSpeed": 1.5,
+
+"ammoTypes": {
+"pyrite": {
+"damage": 250,
+"buildingDamageMultiplier": 0.2,
+"speed": 17,
+"width": 20,
+"height": 10,
+"shrinkY": 0.1,
+"backSprite": "large-bomb-back",
+"sprite": "mine-bullet",
+"collidesGround": true,
+"collidesTiles": true,
+"shootEffect": {
+"type": "multiEffect",
+"effects": [
+  {
+	"type": "ParticleEffect"
+	"followParent": true
+	"rotWithParent": true
+	"useRotation": true
+	"randLength": false
+	"lifetime": 25
+	"particles": 1
+	"length": 0
+	"colorFrom": "ffffffff"
+	"colorTo": "ffffff00"
+	"sizeFrom": 15
+	"sizeTo": 30
+	"region": "ld-sound-wave"
+	"interp": "pow2Out"
+  }, 
+  {
+    "type": "ParticleEffect"
+    "followParent": true
+    "rotWithParent": true
+    "useRotation": true
+    "randLength": true
+    "lifetime": 75
+    "particles": 2
+    "length": 32
+	"cone": 70
+    "colorFrom": "ba927eff"
+    "colorTo": "ba927e00"
+    "sizeFrom": 9
+	"layer": 30
+    "sizeTo": 0
+    "region": "ld-Artilery-shell"
+    "interp": "pow2Out"
+  },
+  "shootBig"
+  ]
+},
+"smokeEffect": "shootSmokeDisperse",
+"backColor": "ba927e",
+"trailColor": "cba38f",
+"hitColor": "ba927e",
+"trailLength": 11,
+"trailWidth": 3,
+"ammoMultiplier": 1,
+"trailChance": 1,
+"lifetime": 22,
+"rotationOffset": 90,
+"trailRotation": "true",
+"trailEffect": "disperseTrail",
+"shootSound": "shot-big-echo",
+"shootSoundVolume": 1.5
+"hitSound": "metal-hit",
+"hitSoundVolume": 1.2
+"despawnSound": "ground-hit-hard"
+"despawnSoundVolume": 1
+"pierce": false
+"pierceCap": 2
+"armorMultiplier": 0.5
+"trailEffect": {
+"type": "multiEffect",
+"effects": [
+  {
+    "type": "ParticleEffect"
+    "followParent": true
+    "rotWithParent": true
+    "useRotation": true
+    "randLength": false
+    "lifetime": 17
+    "particles": 0
+    "length": 0
+	"cone": 0
+    "colorFrom": "ba927eff"
+    "colorTo": "ba927e00"
+    "sizeFrom": 4
+	"layer": 30
+    "sizeTo": 25
+    "region": "ld-sound-wave"
+    "interp": "pow2In"
+  }]
+},
+"hitEffect": {
+"type": "multiEffect",
+"effects": ["colorSpark"]
+},
+"despawnHit": true,
+},
+},
+"requirements": [
+  "pyrite/350", 
+  "paladium/220",
+  "rodium/255"
+],
+"category": "turret",
+}

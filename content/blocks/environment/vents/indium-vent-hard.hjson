@@ -1,0 +1,10 @@
+name: Indium vent hard
+type: SteamVent
+blendGroup: indium-floor2-hard
+parent: indium-floor2-hard
+effect: ventSteam
+effectColor: "55544f"
+attributes: {
+   steam: 0.5
+   methane: 1
+}

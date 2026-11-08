@@ -1,0 +1,6 @@
+type: StaticWall,
+name: red sand hard wall,
+variants: 2             //Кол-во вариаций (Спрайтов)
+attributes: {
+  sand: 1
+}

@@ -1,0 +1,16 @@
+type: floor,
+name: gallium liquid floor,
+variants: 2,             //Кол-во вариаций (Спрайтов)
+wall: gallium-wall
+type: floor
+speedMultiplier: 0.2
+isLiquid: true
+liquidDrop: gallium
+albedo: 0.8
+damageTaken: 2
+drownTime: 90
+supportsOverlay: true
+liquidMultiplier: 1.5
+//cacheLayer: slag
+cacheLayer: water
+overlayAlpha: 0

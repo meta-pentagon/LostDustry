@@ -1,0 +1,10 @@
+name: Indium vent medium
+type: SteamVent
+blendGroup: indium-floor2-medium
+parent: indium-floor2-medium
+effect: ventSteam
+effectColor: "55544f"
+attributes: {
+   steam: 1.25
+   methane: 1
+}

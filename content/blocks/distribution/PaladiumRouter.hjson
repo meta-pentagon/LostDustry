@@ -1,0 +1,10 @@
+  type: Router
+  category: distribution
+  name: Paladium router
+  health: 55
+  size: 1
+  capacity: 1
+
+  requirements: [
+    "paladium/4"
+  ]

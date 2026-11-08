@@ -1,0 +1,24 @@
+name: "Mech constructor"
+type: UnitFactory
+health: 425
+size: 3
+configurable: true
+consumes: {
+power: 0.5
+liquid: "methane/0.033333333",
+}
+plans: [
+  {
+    unit: Meglit
+    requirements: [
+	  "rodium/10",
+	  "pyrite/12",
+    ]
+    time: 720
+  }
+]
+category: units
+requirements: [
+  "pyrite/50", 
+  "rodium/40"
+]

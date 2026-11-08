@@ -1,0 +1,340 @@
+type: mech
+name: Meglit
+description: DPS machine, low health, slow. Strong in only big numbers, or in a combination of other type units.
+speed: 1.2
+flying: false
+health: 520
+armor: 2
+hitSize: 10
+outlineColor: 303035
+mechLegColor: 303035
+stepSound: mechStepSmall
+stepSoundVolume: 0.4
+abilities: [
+  {
+    type: MoveEffectAbility
+    minVelocity: 0.1
+    x: 0
+    y: -1.2
+	effect: {
+	  type: ParticleEffect
+	  followParent: false
+	  rotWithParent: true
+	  useRotation: true
+	  randLength: false
+	  lifetime: 20
+	  particles: 1
+	  length: 0
+	  colorFrom: ffc491ff
+	  colorTo: feb38000
+	  sizeFrom: 3.5
+	  sizeTo: 0
+	  layer: 30
+	  region: ld-sound-star
+	  interp: pow2Out
+	}
+    teamColor: true
+    interval: 1
+  }
+]
+weapons: [
+    {
+      top: false
+      x: -6.6
+      name: Meglit-weapon1
+      recoil: 2
+	  recoilTime: 16
+      shootCone: 35
+      y: 1.65
+      reload: 70
+      rotate: true
+	  rotateSpeed: 2
+      mirror: true
+      alternate: true
+	  "inaccuracy": 2,
+	  heatRegion: Meglit-weapon1-heat
+	  rotationLimit: 14
+	  heatColor: ff4a23
+	  lifeRnd: 0.1
+	  extraLife: 0.01
+	  aiControllable: true
+      "shoot": {
+			"type": "ShootMulti",
+			"source": {
+				"type": "ShootBarrel"
+				"barrels": [
+					0, 4.2, -2,
+				]
+			},
+			"dest": [
+				{
+					"type": "ShootPattern",
+					"shots": 3
+					"shotDelay": 8
+				}
+			]
+      },
+      shootSound: shootElude
+      shootSoundVolume: 0.7
+      bullet: {
+          type: BasicBulletType
+          speed: 6
+          lifetime: 18
+          damage: 12
+          pierce: true
+          pierceCap: 2
+          width: 5
+          height: 8
+          sprite: ld-pierce-bullet-small-kinda
+		  trailEffect: {
+			type: ParticleEffect
+			followParent: true
+			rotWithParent: true
+			useRotation: true
+			randLength: false
+			lifetime: 25
+			particles: 1
+			length: 0
+			colorFrom: feb380ff
+			colorTo: feb38088
+			sizeFrom: 2.2
+			sizeTo: 0
+			region: ld-sound-wave
+			interp: pow2Out
+		  }
+		  trailColor: feb380ff
+		  trailInterval: 2
+		  trailRotation: true
+		  trailLength: 12
+		  trailWidth: 1
+          recoil: 0.2
+          impact: false
+		  hitSound: explosion
+		  hitSoundVolume: 0.5
+		  frontColor: feb380ff
+		  backColor: ffc491ff
+		  collideTerrain: true
+		  knockback: -3
+		  fragBullets: 2
+		  fragAngle: 0
+		  fragSpread: 180
+		  fragRandomSpread: 1
+		  fragVelocityMin: 1
+		  fragVelocityMax: 1
+		  fragLifeMin: 1
+		  fragLifeMax: 1
+		  fragOnHit: false
+		  fragOnDespawn: true
+		  collideFloor: false
+		  armorMultiplier: 0.75
+		  blockArmorMultiplier: 1.5
+		  despawnSound: explosion
+		  bulletInterval: 999
+		  intervalBullets: 1
+		  intervalRandomSpread: 0
+		  intervalSpread: 0
+		  intervalAngle: 0
+		  intervalDelay: -1
+		  intervalBullet: {
+		    createChance: 0.333
+            type: BasicBulletType
+	    	despawnEffect: {
+	    		type: ParticleEffect
+	    		followParent: false
+	    		rotWithParent: true
+	    		useRotation: true
+	    		randLength: false
+	    		lifetime: 20
+	    		particles: 1
+	    		length: 0
+	    		colorFrom: ffc491ff
+	    		colorTo: ffc49100
+	    		sizeFrom: 3
+	    		sizeTo: 3
+	    		layer: 30
+	    		region: ld-deflect-medium
+	    		interp: pow3Out
+	    	}
+	    	fragBullets: 2
+	    	fragAngle: 0
+	    	fragSpread: 18
+	    	fragRandomSpread: 0
+	    	fragVelocityMin: 1
+	    	fragVelocityMax: 1
+	    	fragLifeMin: 1
+	    	fragLifeMax: 1
+	    	fragOnHit: true
+	    	fragOnDespawn: true
+	    	instantDisappear: true
+	    	damage: 0
+	    	keepVelocity: false
+            speed: 0
+            lifetime: 0
+            width: 0
+            height: 0
+		    fragBullet: {
+		    	type: BasicBulletType
+		    	pierce: false
+		    	damage: 5
+		    	collides: true
+		    	drag: 0.09
+		    	sprite: ld-pierce-bullet-small-kinda
+		    	width: 4
+		    	height: 5
+		    	shrinkY: -0.5
+		    	shrinkX: 1
+		    	shrinkInterp: pow3Out
+		        frontColor: feb380ff
+		        backColor: ffc491ff
+		    	speed: 3.2
+		    	lifetime: 32
+		    	hitEffect: none
+		    	despawnHit: false
+		    	despawnEffect: none
+		    	hitSound: none
+		    	despawnSound: none
+				trailEffect: {
+					type: ParticleEffect
+					followParent: true
+					rotWithParent: true
+					useRotation: true
+					randLength: false
+					lifetime: 25
+					particles: 1
+					length: 0
+					colorFrom: feb380ff
+					colorTo: feb38088
+					sizeFrom: 2.2
+					sizeTo: 0
+					region: ld-sound-wave
+					interp: pow2Out
+				}
+				trailColor: feb380ff
+				trailInterval: 4
+				trailRotation: true
+				trailLength: 12
+				trailWidth: 1
+			}
+		  }
+		  fragBullet: {
+			type: BasicBulletType
+			pierce: false
+			damage: 5
+			collides: true
+			drag: 0.2
+			sprite: ld-pierce-bullet-small-kinda
+			width: 5
+			armorMultiplier: 1
+		    blockArmorMultiplier: 1.5
+			height: 7
+			shrinkY: 1
+			shrinkX: -0.5
+			shrinkInterp: pow3Out
+		    frontColor: feb380ff
+		    backColor: ffc491ff
+			speed: 1
+			lifetime: 17
+			hitEffect: none
+			despawnHit: false
+			despawnEffect: none
+			hitSound: none
+			despawnSound: none
+		  }
+		  despawnHit: true
+		  shootEffect: {
+			type: ParticleEffect
+			followParent: true
+			rotWithParent: true
+			useRotation: true
+			randLength: false
+			lifetime: 15
+			particles: 1
+			length: 0
+			colorFrom: ffc491ff
+			colorTo: ffc49100
+			sizeFrom: 0
+			sizeTo: 5
+			layer: 150
+			region: ld-sound-star
+			interp: pow3In
+		  }
+		  hitEffect: {
+			type: ParticleEffect
+			followParent: false
+			rotWithParent: true
+			useRotation: true
+			randLength: false
+			lifetime: 7
+			particles: 1
+			length: 1
+			colorFrom: ffc491ff
+			colorTo: ffc49100
+			sizeFrom: 3
+			sizeTo: 5
+			layer: 150
+			region: ld-grapling-small
+			interp: pow2In
+		  }
+		  despawnEffect: {
+			type: ParticleEffect
+			followParent: false
+			rotWithParent: false
+			useRotation: false
+			randLength: false
+			lifetime: 35
+			particles: 1
+			length: 0
+			colorFrom: ffc491ff
+			colorTo: ffc49188
+			sizeFrom: 5
+			sizeTo: 0
+			layer: 30
+			region: ld-sound-star
+			interp: pow2Out
+		  }
+      }
+    }
+  {
+    x: 0
+    y: 0
+    name: Meglit-weapon2
+    reload: 105
+	recoil: 0
+    rotate: false
+	top: false
+	layer: 60
+    mirror: false
+	recoilTime: 80
+    shootSound: shootAvert
+    shootSoundVolume: 0.5
+      "shoot": {
+			"type": "ShootMulti",
+			"source": {
+				"type": "ShootBarrel"
+				"barrels": [
+					0, 1.1, 0,
+				]
+			},
+			"dest": [
+				{
+					"type": "ShootPattern",
+					"shots": 2
+					"shotDelay": 0
+				}
+			]
+      },
+	heatRegion: Meglit-weapon2-heat
+	heatColor: ff4a23ff
+    bullet: {
+      type: LightningBulletType
+      lightningLength: 10
+      damage: 10
+      pierce: false
+	  unitDamageMultiplier: 1
+      buildingDamageMultiplier: 0.5
+      pierceBuilding: false
+      lightningColor: ffc491ff
+	  lightningCone: 6
+    }
+  }
+]

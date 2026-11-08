@@ -1,0 +1,94 @@
+{
+    "name": "oxygen mixer",
+    "description": "...",
+    "type": "HeatCrafter",
+    "squareSprite": "true",
+    "health": 250,
+    "outputLiquid": {"liquid": "oxygen", "amount": 0.1},
+    "drawer": {
+        "type": "DrawMulti",
+        "drawers": [
+			{
+				"type": "drawRegion",
+				"suffix": "-bottom"    
+			},
+			{
+				"type": "DrawLiquidTile",
+				"drawLiquid": "oxygen",
+				"alpha": 0.75,
+				"padding": 2.5
+			},
+            {
+			  "type": "DrawLiquidRegion",
+			  "drawLiquid": "gallium",
+			  "suffix": "-liquid1",
+			  "alpha": 0.75
+            },
+            {
+			  "type": "DrawLiquidRegion",
+			  "drawLiquid": "gallium",
+			  "suffix": "-liquid2",
+			  "alpha": 0.75
+            },
+			{
+				"type": "DrawRegion",
+				"suffix": "-rotator2",
+				"rotateSpeed": -2.5,
+				"spinSprite": true
+			},
+			{
+				"type": "DrawRegion",
+				"suffix": "-rotator1",
+				"rotateSpeed": 3.5,
+				"spinSprite": true
+			},
+			{
+				"type": "DrawDefault"
+			}
+        ],
+    },
+    "size": 2,
+    "hasPower": false,
+    "hasItems": true,
+    "hasLiquids": true,
+    "liquidCapacity": 45,
+	"heatRequirement": 3,
+    "consumes": {
+    "power": 0.75,
+      "liquids": [
+        "gallium/0.033333333"
+      ],
+      "items": [
+        "pyrite/1",
+      ],
+    },
+	"effectChance": 0.5
+	"craftEffect": {
+		"type": "RadialEffect"
+		"layer": 118
+		"rotationSpacing": 90
+		"amount": 4
+		"lengthOffset": 3
+		"effect": {
+			"particles": 3
+			"length": 8
+			"lifetime": 50
+			"cone": 10
+			"useRotation": true
+			"sizeFrom": 0
+			"sizeTo": 2
+			"colorFrom": "b3638599"
+			"colorTo": "b3638500"
+			"sizeInterp": "pow3Out"
+			"interp": "pow5Out"
+			"layer": 111
+		}
+	}
+    "craftTime": 60,
+    "category": "crafting",
+    "requirements": [
+	  "flamatite/25"
+      "paladium/30",
+	  "rodium/25"
+    ],
+}
