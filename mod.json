@@ -1,0 +1,10 @@
+{
+	"name": "LostDustry",
+	"displayName": "Lost Dustry",
+	"author": "VAVN",
+	"description": "InDian atmosphere",
+	"name": "ld",
+	"version": "0.1",
+	"minGameVersion": "146",
+	"dependencies": ["momiji-lib"]
+}
